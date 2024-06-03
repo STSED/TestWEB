@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" href="https://icons.iconarchive.com/icons/microsoft/fluentui-emoji-flat/512/World-Map-Flat-icon.png" />
+
+    <title>YWEK test1</title>
+
+    <!-- Odkaz na externí CSS soubory se styly -->
+    <link rel="stylesheet" href="leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Odkaz na externí javascript soubory -->
+    <script src="leaflet.js"></script>
+    <script src="leaflet_geoJSON.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+
+    <script src="jscript.js" defer></script> <!-- Tohle jedine edituji -->
+</head>
+
+
+<body>
+    <!-- Horní část stránky, která obsahuje levou a pravou sekci -->
+    <div class="top-container">
+
+        <!-- Levá sekce -->
+        <div class="top-box left" id="box1">
+            <h1>Mapová aplikace</h1> <!-- nadpis prvni trihy h1-->
+            <p>Zobrazující vybrané informace o vzdělanostní struktuře obyvatelstva k roku 2021.</p>
+            
+            <!-- FUNKCNI TLACITKA -->
+            <button onclick="toggleInvertColors()">Invertovat barvy</button>
+            <!-- tlacitko zavola funkci z pripojeneho javascript souboru
+                    a ma definovano svuj popis -->
+            <button onclick="increaseTextSize()">Zvětšit text o 25%</button>
+        </div>
+
+        <!-- Pravá sekce -->
+        <div class="top-box right" id="box2">
+            <h2>Výsečový diagram</h2>
+                <p>Rozdělení obyvatel v okresech podle vzdělání</p>
+                <div class="pie-chart-container">
+                    <div id="chart"></div>
+                    <div id="pie-chart-legend" class="pie-chart-legend"></div>
+                </div>
+        </div>
+    </div>
+
+    <!-- Dolní část stránky -->
+<div id="mapa" class="bottom-container" style="margin: 30px 30px 30px 30px;"></div>
+    </div>
+</body>
+
+
+</html>

@@ -1,0 +1,102 @@
+/* Nastavení základních stylů pro celé tělo stránky a HTML tag */
+body, html {
+    margin: 0; /* Odstranění defaultního okraje */
+    padding: 0; /* Odstranění defaultního odsazení */
+    height: 100%; /* Nastavení výšky na 100% */
+    display: flex; /* Použití flexboxu pro rozložení */
+    flex-direction: column; /* Nastavení směru flexboxu na sloupec */
+    font-family: Arial, sans-serif; /* Nastavení základního fontu */
+}
+
+.top-container {
+    display: flex;
+    justify-content: space-between;
+    height: 30%;
+}
+
+.top-box {
+    width: 48%;
+    background-color: #f0f0f0;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.bottom-container {
+    height: 60%;
+    background-color: #ffffff;
+}
+
+/* PREPNUTI DO TMAVEHO MODU
+   - funkce miri do body casti html a cili na jeji definovane casti .left, .right,... */
+
+/* aplikovani zmeny barvy na cele body */
+body.invert-colors {
+    background-color: rgb(35, 35, 35); /* Nastavení černého pozadí */
+    color: white; /* Nastavení bílého textu */
+}
+
+
+
+/* ZVETSENI TEXTU NA STRANCE
+   - funkce increase-text-size miri na celou cast body */
+body.increase-text-size {
+    font-size: 125%; /* Zvětšení textu o 25% */
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+#box1 {
+    background-color: #ffffff00;
+    color: #000000;
+}
+#box2 {
+    background-color: #ffffff00;
+}
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+.legend {
+    text-align: left;
+    line-height: 18px;
+    color: #555;
+}
+
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+.leaflet-control-button {
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+}
+
+.pie-chart-container {
+    display: flex;
+    align-items: center;
+}
+
+.pie-chart-legend {
+    margin-left: 20px;
+}
